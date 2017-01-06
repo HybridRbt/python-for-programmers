@@ -22,16 +22,19 @@ percentage = float(score) / float(pointspossible)
 sentence = studentname + ", your score is " + str(score) + "."
 sentence += "\nYour grade is "
 
-if 0 <= percentage <= 0.59:
-    sentence += "F"
-elif 0.6 <= percentage <= 0.69:
-    sentence += "D"
-elif 0.7 <= percentage <= 0.79:
-    sentence += "C"
-elif 0.8 <= percentage <= 0.89:
-    sentence += "B"
-elif 0.9 <= percentage <= 1:
-    sentence += "A"
+if score < 0 or score > 100:
+    print("The score is out of range.")
+else:
+    if 0 <= percentage <= 0.59:
+        sentence += "F"
+    elif 0.6 <= percentage <= 0.69:
+        sentence += "D"
+    elif 0.7 <= percentage <= 0.79:
+        sentence += "C"
+    elif 0.8 <= percentage <= 0.89:
+        sentence += "B"
+    elif 0.9 <= percentage <= 1:
+        sentence += "A"
 
-sentence += "."
-print(sentence)
+    sentence += "."
+    print(sentence)
