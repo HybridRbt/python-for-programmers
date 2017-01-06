@@ -19,8 +19,8 @@ F - 59-0%
 percentage = float(score) / float(pointspossible)
 
 # Get grade from percentage
-sentence = studentname + ", your score is " + score
-sentence += "Your grade is "
+sentence = studentname + ", your score is " + str(score) + "."
+sentence += "\nYour grade is "
 
 if 0 <= percentage <= 0.59:
     sentence += "F"
