@@ -12,7 +12,14 @@ def prompt_user(word):
         sentence += " character."
     else:
         sentence += " characters."
-    sentence += " Please take a guess."
+
+    print(sentence)
+
+def verify_answer(guess):
+    sentence = "You guess is: "
+    sentence += guess
     print(sentence)
 
 prompt_user(word)
+guess = input("Please take a guess.\n")
+verify_answer(guess.lower())
