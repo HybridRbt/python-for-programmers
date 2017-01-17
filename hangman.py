@@ -17,14 +17,15 @@ def verify_answer(guess, word, previous_answer):
     sentence += guess
     print(sentence)
 
-    result = "The word is: "
-    for character in word:
-        if guess == character:
-            result += guess + " "
+    print("The word is: ")
+    result = previous_answer
+    for index in range(len(word)):
+        if guess.lower() == word[index].lower():
+            result[index] = guess
             life = 0 #indicate that the answer is right and no life will be taken
-        else:
-            result += "_ "
-            life = -1 #wrong answer, take 1 life
+
+    life = -1 #wrong answer, take 1 life
+
     print(result)
     return (life, result)
 
