@@ -28,6 +28,13 @@ def verify_answer(guess, word, previous_answer):
     print(result)
     return (life, result)
 
+def prepare_answer(word):
+    answer = []
+    for index in range(len(word)):
+        answer.append("_")
+
+    return answer
+
 def hangman():
     lives = 10
     word = "Apple"
