@@ -40,7 +40,9 @@ def hangman():
 
         if "_" in result:
              # still haven't got the word, continue
-            lives += life
+             answer = result
+             lives += life
+             continue
         else:
             print("You won! The word is: " + word)
 
