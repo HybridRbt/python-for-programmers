@@ -1,7 +1,6 @@
 # Hangman
 
 def prompt_user(word, lives):
-    sentence = "Welcome! The word has "
     word_len = len(word)
     sentence += str(word_len)
 
@@ -32,6 +31,7 @@ def verify_answer(guess, word):
 def hangman():
     lives = 10
     word = "Apple"
+    print("Welcome!")
 
     while lives > 0:
         prompt_user(word, lives)
