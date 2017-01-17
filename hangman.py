@@ -12,7 +12,7 @@ def prompt_user(word, lives):
     sentence += "\nYou have " + str(lives) + " lives left."
     print(sentence)
 
-def verify_answer(guess, word):
+def verify_answer(guess, word, previous_answer):
     sentence = "You guess is: "
     sentence += guess
     print(sentence)
@@ -36,7 +36,8 @@ def hangman():
     while lives > 0:
         prompt_user(word, lives)
         guess = input("Please take a guess.\n")
-        (life, result) = verify_answer(guess.lower(), word)
+        (life, result) = verify_answer(guess, word, answer)
+
         if "_" in result:
              # still haven't got the word, continue
             lives += life
