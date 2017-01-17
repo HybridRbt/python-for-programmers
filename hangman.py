@@ -1,6 +1,7 @@
 # Hangman
 
 def prompt_user(word, lives):
+    sentence = "The word has "
     word_len = len(word)
     sentence += str(word_len)
 
@@ -37,8 +38,9 @@ def prepare_answer(word):
     return answer
 
 def hangman():
-    lives = 10
+    lives = 5
     word = "Apple"
+    answer = prepare_answer(word)
     print("Welcome!")
 
     while lives > 0:
@@ -53,5 +55,8 @@ def hangman():
              continue
         else:
             print("You won! The word is: " + word)
+            return
+
+    print("You lost! The word is: " + word)
 
 hangman()
